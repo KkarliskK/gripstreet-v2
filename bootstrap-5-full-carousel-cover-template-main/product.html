@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>GripStreet</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+
+    <style>
+      /* For smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Adding this so the smooth scroll is centering the section in the middle of the screen */
+      #contact {
+        scroll-margin-top: 40vh; 
+      }
+
+      #about {
+        scroll-margin-top: 10vh; 
+      }
+
+
+      /* Carousel styling */
+      #introCarousel,
+      .carousel-inner,
+      .carousel-item,
+      .carousel-item.active {
+        height: 100vh;
+      }
+
+      .carousel-item:nth-child(1) {
+        background-image: url('https://images.pexels.com/photos/17716298/pexels-photo-17716298/free-photo-of-a-parking-lot-with-many-cars-parked-in-it.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+
+      .carousel-item:nth-child(2) {
+        background-image: url('https://images.pexels.com/photos/17544885/pexels-photo-17544885/free-photo-of-cars-at-sunset.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+
+      .carousel-item:nth-child(3) {
+        background-image: url('https://images.pexels.com/photos/9846046/pexels-photo-9846046.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+
+      /* Height for devices larger than 576px */
+      @media (min-width: 992px) {
+        #introCarousel {
+          margin-top: -58.59px;
+        }
+      }
+
+      .navbar .nav-link {
+        color: #fff !important;
+      }
+    </style>
+</head>
+<body>
+      <!--Main Navigation-->
+  <header>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000;">
+      <div class="container-fluid">
+        <!-- Navbar brand -->
+        <a class="navbar-brand nav-link" target="_blank" href="https://mdbootstrap.com/docs/standard/">
+          <strong>MDB</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-mdb-collapse-init data-mdb-target="#navbarExample01"
+          aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarExample01">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" aria-current="page" href="full-carousel-cover.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about" rel="nofollow">What is GripStret</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav list-inline">
+            <!-- Icons -->
+            <li class="">
+              <a class="nav-link" href="https://www.facebook.com/gripstreet" rel="nofollow" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://instagram.com/gripstreetlatvija" rel="nofollow" target="_blank">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/kkarliskk" rel="nofollow" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar -->
+
+    <!--Main layout-->
+    <main class="mt-5 pt-4">
+        <div class="container mt-5">
+            <!--Grid row-->
+            <div class="row">
+                <!--Grid column-->
+                <div class="col-md-6 mb-4">
+                    <img id="product-image" src="" class="img-fluid" loading="lazy" alt="" />
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-md-6 mb-4">
+                    <!--Content-->
+                    <div id="product-container" class="p-4">
+                      <h2 id="product-name"></h2>
+                        <div class="mb-3">
+                            <a href="">
+                                <span class="badge bg-dark me-1">Category 2</span>
+                            </a>
+                            <a href="">
+                                <span class="badge bg-info me-1">New</span>
+                            </a>
+                            <a href="">
+                                <span class="badge bg-danger me-1">Bestseller</span>
+                            </a>
+                        </div>
+
+                        <p class="lead">
+                            <span class="me-1">
+                                <del>$200</del>
+                            </span>
+                            <span id="product-price"></span>
+                        </p>
+
+                        <strong><p style="font-size: 20px;">Description</p></strong>
+
+                        <p id="product-description"></p>
+
+                        <form class="d-flex justify-content-left">
+                            <!-- Default input -->
+                            <div class="form-outline me-1" style="width: 100px;">
+                                <input type="number" value="1" class="form-control" />
+                            </div>
+                            <button class="btn btn-primary ms-1" type="submit">
+                                Add to cart
+                                <i class="fas fa-shopping-cart ms-1"></i>
+                            </button>
+                        </form>
+                    </div>
+                    <!--Content-->
+                </div>
+                <!--Grid column-->
+            </div>
+            <!--Grid row-->
+
+            <hr />
+
+            <!--Grid row-->
+            <div class="row d-flex justify-content-center">
+                <!--Grid column-->
+                <div class="col-md-6 text-center">
+                    <h4 class="my-4 h4">Additional information</h4>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus suscipit modi sapiente illo soluta odit voluptates, quibusdam officia. Neque quibusdam quas a quis porro? Molestias illo neque eum in laborum.</p>
+                </div>
+                <!--Grid column-->
+            </div>
+            <!--Grid row-->
+
+            <!--Grid row-->
+            <div class="row">
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-12 mb-4">
+                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/11.jpg" class="img-fluid" alt="" />
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/12.jpg" class="img-fluid" alt="" />
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/13.jpg" class="img-fluid" alt="" />
+                </div>
+                <!--Grid column-->
+            </div>
+            <!--Grid row-->
+        </div>
+    </main>
+    <!--Main layout-->
+
+  <!--Footer-->
+  <footer class="bg-light text-lg-start">
+
+    <div class="text-center py-4 align-items-center">
+      <p>Follow GripStreet on social media</p>
+      <a href="https://www.facebook.com/gripstreet" class="btn btn-primary m-1" role="button" rel="nofollow" data-mdb-ripple-init
+        target="_blank">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://instagramcom/gripstreetlatvija" class="btn btn-primary m-1" role="button" rel="nofollow" data-mdb-ripple-init
+        target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://github.com/kkarliskk" class="btn btn-primary m-1" role="button" rel="nofollow" data-mdb-ripple-init
+        target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2024 Copyright:
+      <a class="text-dark">GripStreet</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!--Footer-->
+    <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.umd.min.js"></script>
+    <script src="js/product.js"></script>
+</body>
+</html>
